@@ -1,0 +1,7 @@
+{
+  "name": "Ceres Shop - Intercambio para Padres",
+  "description": "Una comunidad cálida y segura para que los nuevos padres compren, vendan e intercambien artículos para bebés, mientras comparten sabiduría sobre la crianza.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
