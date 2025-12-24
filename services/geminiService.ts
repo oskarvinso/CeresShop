@@ -7,7 +7,7 @@ export const geminiService = {
   async generateListingOptimization(title: string, details: string) {
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
-      contents: `Actúa como un experto redactor de productos para bebés. Tengo un anuncio titulado "${title}" con estos detalles: "${details}". Genera una descripción de producto cálida, confiable y atractiva (máx. 100 palabras) en ESPAÑOL y sugiere un rango de precio justo para un artículo de segunda mano en USD. Salida como JSON.`,
+      contents: `Actúa como un experto redactor de productos para bebés. Tengo un anuncio titulado "${title}" con estos detalles: "${details}". Genera una descripción de producto cálida, confiable y atractiva (máx. 100 palabras) en ESPAÑOL y sugiere un rango de precio justo para un artículo de segunda mano en Pesos Colombianos (COP). Salida como JSON.`,
       config: {
         responseMimeType: "application/json",
         responseSchema: {

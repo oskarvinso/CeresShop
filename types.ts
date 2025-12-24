@@ -6,16 +6,31 @@ export interface User {
   isLoggedIn: boolean;
 }
 
+export type DeliveryMethod = 'Envío Nacional' | 'Entrega Personal Segura';
+export type OrderStatus = 'Pendiente' | 'Enviado' | 'Entregado' | 'Completado';
+
 export interface Listing {
   id: string;
   title: string;
   description: string;
-  price: number | 'Intercambio';
-  category: 'Ropa' | 'Equipo' | 'Juguetes' | 'Habitación' | 'Alimentación';
-  condition: 'Nuevo' | 'Como nuevo' | 'Poco uso';
+  price: number | 'Trueque';
+  category: 'Ropita' | 'Coches y Cunas' | 'Juguetes' | "Pa' el Cuarto" | 'Comidita';
+  condition: 'Nuevo' | 'Como nuevo' | 'Segundazo bueno';
   image: string;
   sellerId: string;
   sellerName: string;
+  date: string;
+  deliveryMethod: DeliveryMethod;
+}
+
+export interface Order {
+  id: string;
+  listingId: string;
+  title: string;
+  price: number | 'Trueque';
+  status: OrderStatus;
+  trackingNumber?: string;
+  deliveryMethod: DeliveryMethod;
   date: string;
 }
 
@@ -31,4 +46,4 @@ export interface CommunityPost {
   date: string;
 }
 
-export type AppView = 'marketplace' | 'community' | 'sell' | 'profile';
+export type AppView = 'marketplace' | 'community' | 'sell' | 'profile' | 'orders';
